@@ -20,7 +20,7 @@
         "SEND_READ": {
             "description": "send read receipt.",
             "required": false,
-            "value": "true"
+            "value": "false"
         },
         "HEROKU": {
             "description": "Enable heroku features",
