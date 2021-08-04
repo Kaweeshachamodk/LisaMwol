@@ -1,5 +1,9 @@
-FROM quay.io/lyfe00011/test:beta
-RUN git clone https://github.com/lyfe00011/bot.git /root/WhatsAsena/
-WORKDIR /root/whatsAsena/
+FROM fusuf/whatsasena:latest
+
+RUN git clone https://github.com/Shahid-KLDM/LisaMwol /root/WhatsAsenaDuplicated
+WORKDIR /root/WhatsAsenaDuplicated/
+ENV TZ=Europe/Istanbul
+RUN npm install supervisor -g
 RUN yarn install --no-audit
+
 CMD ["node", "bot.js"]
